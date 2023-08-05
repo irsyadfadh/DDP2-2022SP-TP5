@@ -4,16 +4,23 @@ public class Cart {
     private Customer customer;
     private ArrayList<OrderItem> orderList;
 
-    Cart() {
-        // TODO: Implement this method.
-    };
+    public Cart(Customer customer) {
+        this.customer = customer;
+        this.orderList = new ArrayList<>();
+    }
 
     public int getTotalPrice() {
-        // TODO: Implement this method.
-        return 0;
+        int totalPrice = 0;
+        for (OrderItem orderItem : orderList) {
+            totalPrice += orderItem.getFinalPrice();
+        }
+        if (customer.isPremium() && totalPrice >= 300000) {
+            totalPrice -= totalPrice * 0.1;
+        }
+        return totalPrice;
     }
 
     public void addOrderItem(OrderItem orderItem) {
-        // TODO: Implement this method.
-    };
+        orderList.add(orderItem);
+    }
 }

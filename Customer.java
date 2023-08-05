@@ -1,3 +1,17 @@
 public class Customer {
-    // TODO: Implement this class.
+    private String name;
+    private boolean isPremium;
+
+    public Customer(String name, boolean isPremium) {
+        this.name = name;
+        this.isPremium = isPremium;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public boolean isPremium() {
+        return isPremium;
+    }
 }
