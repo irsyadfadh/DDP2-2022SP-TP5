@@ -1,12 +1,21 @@
 import java.util.ArrayList;
+import java.util.List;
 
 public class Cart {
     private Customer customer;
-    private ArrayList<OrderItem> orderList;
+    private List<OrderItem> orderList;
 
     public Cart(Customer customer) {
         this.customer = customer;
         this.orderList = new ArrayList<>();
+    }
+
+    public Customer getCustomer() {
+        return customer;
+    }
+
+    public List<OrderItem> getOrderList() {
+        return orderList;
     }
 
     public int getTotalPrice() {

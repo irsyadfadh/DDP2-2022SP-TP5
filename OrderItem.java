@@ -2,12 +2,22 @@ public class OrderItem {
     private Product product;
     private int quantity;
 
-    OrderItem() {
-        // TODO: Implement this method.
-    };
+    public OrderItem(Product product, int quantity) {
+        this.product = product;
+        this.quantity = quantity;
+    }
+
+    public Product getProduct() {
+        return product;
+    }
+
+    public int getQuantity() {
+        return quantity;
+    }
 
     public int getFinalPrice() {
-        // TODO: Implement this method.
-        return 0;
+        int discountPercentage = product.checkDiscount(quantity);
+        int itemTotalPrice = product.price * quantity;
+        return itemTotalPrice - (itemTotalPrice * discountPercentage / 100);
     }
 }
