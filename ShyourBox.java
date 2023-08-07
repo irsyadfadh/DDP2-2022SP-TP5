@@ -89,7 +89,7 @@ public class ShyourBox {
         } while (choice != 0);
         scanner.close();
     }
-
+    /*Metode untuk memproses proses pembelian produk oleh pelanggan. */
     public void buyProduct(Scanner scanner) {
         scanner.nextLine();
         System.out.print("Masukkan nama customer: ");
@@ -135,7 +135,7 @@ public class ShyourBox {
         carts.add(cart);
         System.out.println("Terima kasih sudah berbelanja, " + customerName + "!");
     }
-
+    /*Method untuk mencari produk berdasarkan nama. */
     public Product searchProduct(String names) {
         for (Product product : products) {
             if (product.name.equalsIgnoreCase(names) == true) {
@@ -144,7 +144,7 @@ public class ShyourBox {
         }
         return null;
     }
-
+    /*Method untuk membaca produk dari file dan menambahkannya ke dalam daftar produk. */
     public void addProduct(String fileAddress) {
         try {
             Scanner scanner = new Scanner(new File(fileAddress));
@@ -173,7 +173,7 @@ public class ShyourBox {
             e.printStackTrace();
         }
     }
-
+    /*Method untuk membaca customer dari file dan menambahkannya ke dalam daftar pelanggan. */
     public void addCustomer(String fileAddress) {
         try {
             Scanner scanner = new Scanner(new File(fileAddress));
@@ -192,7 +192,7 @@ public class ShyourBox {
             e.printStackTrace();
         }
     }
-
+    /*Metode untuk mencari customer berdasarkan nama. */
     public Customer findCustomer(String name) {
         for (Customer customer : customers) {
             if (customer.getName().equalsIgnoreCase(name)) {
@@ -201,7 +201,7 @@ public class ShyourBox {
         }
         return null;
     }
-
+    /*Metode untuk mencetak struk belanja ke file "Struk.txt" berdasarkan keranjang yang disimpan. */
     public void printReceipt() {
         try {
             FileWriter writer = new FileWriter("Struk.txt");

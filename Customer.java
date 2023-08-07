@@ -1,3 +1,4 @@
+/*Class informasi customer atau pelanggan */
 public class Customer {
     private String name;
     private boolean isPremium;
@@ -6,11 +7,11 @@ public class Customer {
         this.name = name;
         this.isPremium = isPremium;
     }
-
+    /*Return nama customer */
     public String getName() {
         return name;
     }
-
+    /*return status premium customer */
     public boolean isPremium() {
         return isPremium;
     }

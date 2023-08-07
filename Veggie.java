@@ -1,3 +1,4 @@
+/*subkelas dari Product yang merepresentasikan produk sayuran. */
 public class Veggie extends Product {
 
     private boolean isOrganic;
@@ -26,7 +27,8 @@ public class Veggie extends Product {
     public void setStock(int stock) {
         this.stock = stock;
     }
-
+    /*Menghitung diskon berdasarkan kuantitas pembelian sayuran. */
+    //diskon berbeda untuk sayuran organik dan konvensional
     @Override
     public int checkDiscount(int quantity) {
         if (isOrganic) {

@@ -1,3 +1,4 @@
+/*subkelas dari Product yang merepresentasikan produk buah.  */
 public class Fruit extends Product {
     private boolean isLocal;
 
@@ -5,7 +6,7 @@ public class Fruit extends Product {
         super(name, price, stock);
         this.isLocal = isLocal;
     }
-
+    /*return status lokal buah */
     public boolean getIsLocal() {
         return this.isLocal;
     }
@@ -25,7 +26,7 @@ public class Fruit extends Product {
     public void setStock(int stock) {
         this.stock = stock;
     }
-
+    /*Menghitung diskon berdasarkan kuantitas pembelian buah. Diskon berbeda untuk buah lokal dan buah impor */
     @Override
     public int checkDiscount(int quantity) {
         if (isLocal) {

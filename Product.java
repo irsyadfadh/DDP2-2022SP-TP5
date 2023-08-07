@@ -1,3 +1,4 @@
+/*class abstract representasi product */
 public abstract class Product {
     protected String name;
     protected int price;
@@ -8,6 +9,6 @@ public abstract class Product {
         this.price = price;
         this.stock = stock;
     }
-
+    /*Method abstrak yang didefinisikan ulang oleh subkelas untuk menghitung diskon berdasarkan kuantitas pembelian. */
     public abstract int checkDiscount(int quantity);
 }
